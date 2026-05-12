@@ -96,10 +96,7 @@ def game_over_screen(stdscr: curses.window, score: int) -> None:
 
 def run_game(stdscr: curses.window) -> bool:
     """Run one game. Returns True if user wants restart."""
-    try:
-        curses.curs_set(0)
-    except curses.error:
-        pass
+    curses.curs_set(0)
     stdscr.nodelay(True)
     stdscr.keypad(True)
 
